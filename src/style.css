@@ -1,0 +1,156 @@
+body {
+    height: 100%;
+}
+#tsparticles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -10;
+}
+
+#tsparticles2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -10;
+}
+#tsparticles3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -10;
+}
+
+#tsparticles5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -10;
+}
+#tsparticles4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -10;
+}
+@media screen and (max-width: 1000px) {
+    .conference-detail p {
+        font-size: 20px;
+    }
+}
+.time-and-place {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.default-b-radius {
+    border-radius: 20px;
+}
+.no-list-style {
+    list-style: none;
+}
+.default-margin {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.orange-box {
+    background: #e69c7a;
+    color: #032433;
+}
+.black-box {
+    background-color: #032433;
+    color: #e69c7a;
+}
+.time-box {
+    display: flex;
+    align-items: center;
+    width: 230px;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+.place-box {
+    width: 230px;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+.icon-widget {
+    font-size: 50px;
+}
+.default-box {
+    border-radius: 20px;
+    padding: 10px 10px;
+}
+.blue-box {
+    background-color: #add7eb;
+    color: #032433;
+}
+
+.new-blue-box {
+    background-color: #180449;
+    color: #fff;
+}
+.grey-box {
+    background-color: #b3d0b3;
+    color: #000;
+}
+.speakers-and-tutors {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.speakers {
+    flex-grow: 1;
+    margin: 10px;
+}
+.tutors {
+    flex-grow: 1;
+    margin: 10px;
+}
+.organizers {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.img-card {
+    width: 240px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px;
+}
+.img-logo {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+/* for accordion */
+.accordion {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.accordion-item {
+    border: 2px solid #b3d0b3;
+}
+.accordion-button {
+    background: #d1e9d4;
+}
+.conference-detail {
+    font-size: 20px;
+}
