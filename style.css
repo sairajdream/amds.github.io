@@ -1,6 +1,23 @@
 body {
     height: 100%;
 }
+
+.navbar {
+    box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+    margin-bottom: 20px;
+}
+.navbar-nav {
+    margin: 0 auto;
+}
+.nav-link {
+    color: #2d2d30 !important;
+    border-radius: 20px;
+}
+.nav-link:hover {
+    background: #2d2d30 !important;
+    color: #e69c7a !important;
+}
+
 #tsparticles {
     position: absolute;
     width: 100%;
