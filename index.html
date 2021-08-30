@@ -1,771 +1,944 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>AMDS 2021</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-    <title>AMDS 2021</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navtog"
+                    aria-controls="navbarTogglerDemo01"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navtog">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                aria-current="page"
+                                href="#topic"
+                                >Topics covered</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#guests"
+                                >Guest Speakers</a
+                            >
+                        </li>
 
-<body>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ta"
+                                >Teaching Assistants</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
 
-    <nav class="navbar navbar-expand-lg navbar-light ">
-        <div class="container-fluid">
-            <button 
-                class="navbar-toggler" 
-                type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#navtog" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navtog">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#topic">Topics covered</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#guests">Guest Speakers</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#ta">Teaching Assistants</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#register">How to Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#org">Organizers</a>
-                    </li>
-                </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#register"
+                                >How to Register</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#org">Organizers</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-    <center>
-        <h1>Advanced Molecular Dynamics Simulation:</h1>
-        <h1>A Summer School 2021</h1>
-    </center>
-
-    <web-particles id="tsparticles" options='{"fps_limit":60,"interactivity":{"detectsOn":"canvas","events":{"onClick":{"enable":true,"mode":"push"},"onHover":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"push":{"particles_nb":4},"repulse":{"distance":200,"duration":0.4}}},"particles":{"color":{"value":"#000000"},"links":{"color":"#2d2d30","distance":150,"enable":true,"opacity":0.4,"width":1},"move":{"bounce":false,"direction":"none","enable":true,"outMode":"out","random":false,"speed":2,"straight":false},"number":{"density":{"enable":true,"area":800},"value":80},"opacity":{"value":0.5},"shape":{"type":"circle"},"size":{"random":true,"value":5}},"detectRetina":true}'></web-particles>
-    <div class="time-and-place default-margin">
-        <div class="orange-box time-box default-b-radius">
-            <i class="fas fa-clock icon-widget mr-2"></i>
-            <div>
-                <span>Starts: Sep 6, 2021</span>
-                <br>
-                <span>Ends: Sep 17, 2021</span>
-            </div>
-        </div>
-        <div class="black-box place-box default-b-radius">
-            <i class="fas fa-map-marker-alt icon-widget mr-3"></i>
-            <h2>ZOOM Venue</h2>
-        </div>
-    </div>
-
-    <!-- About Conference -->
-    <div class="about-conference default-margin blue-box default-box">
+        </nav>
         <center>
-            <h3>Introduction</h3>
+            <h1>Advanced Molecular Dynamics Simulation:</h1>
+            <h1>A Summer School 2021</h1>
         </center>
 
-        <div class="conference-detail">
-            <p>This workshop aims at introducing graduate students, young researchers and early career faculties primarily from Asian countries (but also from elsewhere), to the basic to advanced concepts of MD simulations and an introduction session to the state-of-the-art  Machine Learning Techniques. This workshop is divided into two weeks. The first week of the workshop is mainly focused on the basics of MD, a variety of computational software and uses of HPC facilities as well as a special session on 3D rendering via "Blender" software, and other necessary training to handle the advanced lectures to follow on the second week of the workshop. The latter is focused on MD simulations with the interpretation of results and introduction to some post-processing techniques.</p>
-
-
-            <p>The morning sessions of the workshop will consist of lectures on the basic principles and methodologies followed by a special lecture or research talks (covering experimental and theoretical aspects) showing their applications. The afternoon sessions will consist of hands-on tutorials where the participants will do simple and advanced calculations using the GROningen MAchine for Chemical Simulations (GROMACS), and an introduction session to Machine Learning techniques. Further, the school provides access to HPC facilities (both CPU and GPU architecture) for a month to familiarise and train themselves with the concepts taught in the workshop.</p>
+        <web-particles
+            id="tsparticles"
+            options='{"fps_limit":60,"interactivity":{"detectsOn":"canvas","events":{"onClick":{"enable":true,"mode":"push"},"onHover":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"push":{"particles_nb":4},"repulse":{"distance":200,"duration":0.4}}},"particles":{"color":{"value":"#000000"},"links":{"color":"#2d2d30","distance":150,"enable":true,"opacity":0.4,"width":1},"move":{"bounce":false,"direction":"none","enable":true,"outMode":"out","random":false,"speed":2,"straight":false},"number":{"density":{"enable":true,"area":800},"value":80},"opacity":{"value":0.5},"shape":{"type":"circle"},"size":{"random":true,"value":5}},"detectRetina":true}'
+        ></web-particles>
+        <div class="time-and-place default-margin">
+            <div class="orange-box time-box default-b-radius">
+                <i class="fas fa-clock icon-widget mr-2"></i>
+                <div>
+                    <span>Starts: Sep 6, 2021</span>
+                    <br />
+                    <span>Ends: Sep 17, 2021</span>
+                </div>
+            </div>
+            <div class="black-box place-box default-b-radius">
+                <i class="fas fa-map-marker-alt icon-widget mr-3"></i>
+                <h2>ZOOM Venue</h2>
+            </div>
         </div>
-    </div>
-    <!-- About Conference end -->
 
-    <!-- Topics Covered -->
-    <div class="grey-box default-margin default-box topics-covered" id="topic">
-        <center>
-            <h2>Topics Covered</h2>
-        </center>
-        <div class="row align-items-start">
-            <div class="col-lg">
-                <div class="accordion">
-                    <center>
+        <!-- About Conference -->
+        <div class="about-conference default-margin blue-box default-box">
+            <center>
+                <h3>Introduction</h3>
+            </center>
+
+            <div class="conference-detail">
+                <p>
+                    This workshop aims at introducing graduate students, young
+                    researchers and early career faculties primarily from Asian
+                    countries (but also from elsewhere), to the basic to
+                    advanced concepts of MD simulations and an introduction
+                    session to the state-of-the-art Machine Learning Techniques.
+                    This workshop is divided into two weeks. The first week of
+                    the workshop is mainly focused on the basics of MD, a
+                    variety of computational software and uses of HPC facilities
+                    as well as a special session on 3D rendering via "Blender"
+                    software, and other necessary training to handle the
+                    advanced lectures to follow on the second week of the
+                    workshop. The latter is focused on MD simulations with the
+                    interpretation of results and introduction to some
+                    post-processing techniques.
+                </p>
+
+                <p>
+                    The morning sessions of the workshop will consist of
+                    lectures on the basic principles and methodologies followed
+                    by a special lecture or research talks (covering
+                    experimental and theoretical aspects) showing their
+                    applications. The afternoon sessions will consist of
+                    hands-on tutorials where the participants will do simple and
+                    advanced calculations using the GROningen MAchine for
+                    Chemical Simulations (GROMACS), and an introduction session
+                    to Machine Learning techniques. Further, the school provides
+                    access to HPC facilities (both CPU and GPU architecture) for
+                    a month to familiarise and train themselves with the
+                    concepts taught in the workshop.
+                </p>
+            </div>
+        </div>
+        <!-- About Conference end -->
+
+        <!-- Topics Covered -->
+        <div
+            class="grey-box default-margin default-box topics-covered"
+            id="topic"
+        >
+            <center>
+                <h2>Topics Covered</h2>
+            </center>
+            <div class="row align-items-start">
+                <div class="col-lg">
+                    <div class="accordion">
                         <h3>Week 1</h3>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#id-0"
+                                    aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne"
+                                >
+                                    September 6 Day-1: Inauguration ceremony
+                                </button>
+                            </h2>
+                            <div
+                                id="id-0"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingOne"
+                            >
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Time: [9:00 to 10:15]</li>
+                                        <li>
+                                            Teaching Assistants: Dr. C. S.
+                                            Praveen and Dr. Rajendra A
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#id-1"
+                                    aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne"
+                                >
+                                    September 6 Day-1: Hands-on MD [Basics of
+                                    MD/Forcefield/..]
+                                </button>
+                            </h2>
+                            <div
+                                id="id-1"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingOne"
+                            >
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Time: [2:00 to 4:00]</li>
+                                        <li>
+                                            Teaching Assistants: Dr. Reman Kumar
+                                            S, Dr. Satish Dasari, Dr.
+                                            Subrahmanyam S
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#id-2"
+                                    aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne"
+                                >
+                                    September 7 Day-2: Case study-3: Lipids
+                                </button>
+                            </h2>
+                            <div
+                                id="id-2"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingOne"
+                            >
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Time: [11:00 to 12:15]</li>
+                                        <li>
+                                            Teaching Assistants: Prof. Himanshu
+                                            M, Denmark
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#id-3"
+                                    aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne"
+                                >
+                                    September 8 Day-3: Case study-4: QSAR
+                                </button>
+                            </h2>
+                            <div
+                                id="id-3"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingOne"
+                            >
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Time: [9:00 to 10:15]</li>
+                                        <li>
+                                            Teaching Assistants: Prof. Dr.
+                                            Mukesh Doble (IIT Madras)
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#id-4"
+                                    aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne"
+                                >
+                                    September 8 Day-3: Hands-on MD
+                                </button>
+                            </h2>
+                            <div
+                                id="id-4"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingOne"
+                            >
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Time: [2:00 to 4:00]</li>
+                                        <li>
+                                            Teaching Assistants: [Enhanced
+                                            samplings]
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#id-5"
+                                    aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne"
+                                >
+                                    September 8 Day-3: Case study
+                                </button>
+                            </h2>
+                            <div
+                                id="id-5"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingOne"
+                            >
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Time: [6:00 to 7:15]</li>
+                                        <li>
+                                            Teaching Assistants: Prof. Nolan
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <center>
+                        <h3>Week 2</h3>
                     </center>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#one" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-         July 5 Day-1: Virtual Machine, Slack And Glitches
-      </button>
-                        </h2>
-                        <div id="one" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingOne">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li>Time: [1:45pm - 5:00pm]</li>
-                                    <li>Teaching Assistants: Mr. Sai Raj Ali & Dr. Subrahmanyam Sappati. & Dr. C.S. Praveen</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#two" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-         July 6 Day-2: Linux, Shell scripts, Accessing Clusters and Job Scripts. (connectivity to clusters)
-      </button>
-                        </h2>
-                        <div id="two" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingOne">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li>Time: [1:45pm - 5:00pm]</li>
-                                    <li>Dr. Subrahmanyam Sappati. & Mr. Shirshak & Dr. Nandhakumar V. </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#three" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-          July 7 Day-3: Plotting softwares(grace, gnuplot etc)
-      </button>
-                        </h2>
-                        <div id="three" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingOne">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li>Time: [1:45pm - 5:00pm]</li>
-                                    <li>Teaching Assistants: Dr. Niharika Joshi & Dr. Subrahmanyam Sappati.</li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#four" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-        July 8 Day-4: Visualizers (FFParam, VMD, CHIMERA) 
-      </button>
-                        </h2>
-                        <div id="four" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingOne">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li>Time: [1:45pm - 5:00pm]</li>
-                                    <li>Teaching Assistants: Dr. Reman Kumar & Dr. Subrahmanyam Sappati</li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#five" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-         July 9 Day-5: Auto-docking
-      </button>
-                        </h2>
-                        <div id="five" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingOne">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li>Time: [9:00am - 10:30am]</li>
-                                    <li>Topics: FFParam and QMMM input</li>
-                                    <li>Teaching Assistants: Dr. Anmol kumar & Dr. Subrahmanyam Sappati</li>
-                                </ul>
-
-                                <ul>
-                                    <li>Time: [1:45pm - 5:00pm]</li>
-                                    <li>Teaching Assistants:Ms. K. Kavya & Dr. Rajendra Adhikari & Mr. Sarun Jonchhe</li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-lg">
-                <center>
-                    <h3>Week 2</h3>
-                </center>
-
-                <div class="row align-items-start">
-                    <div class="col">
-                        <div class="accordion">
+                    <div class="row align-items-start">
+                        <div class="col">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#seven" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-         July 12 Day-1: Introduction to Molecular Dynamics; Water Models
-      </button>
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#id-010"
+                                        aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseOne"
+                                    >
+                                        September 13 Day-1: Inauguration
+                                        ceremony
+                                    </button>
                                 </h2>
-                                <div id="seven" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingOne">
+                                <div
+                                    id="id-010"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingOne"
+                                >
                                     <div class="accordion-body">
                                         <ul>
-
+                                            <li>Time: [9:00 to 10:15]</li>
                                             <li>
-                                                Class
-                                                <ul>
-                                                    <li>
-                                                        Intro To MD
-                                                    </li>
-                                                    <li>Time: [9:00am - 10:30am]</li>
-                                                    <li>Prof. Arnab Mukherjee</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                Specialized Class
-                                                <ul>
-                                                    <li>MD Simulation in Nepal Yesterday, Today and Tomorrow.</li>
-
-                                                    <li>Time: [11:00am - 12:30pm]</li>
-                                                    <li>Prof. Narayan Adhikari</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                Tutorial
-                                                <ul>
-                                                    <li>Water Simulations SPC/E , TIP3P, TIP4P</li>
-                                                    <li>Water and Calcium + Amides</li>
-                                                    <li>Time: [2:00pm - 5:00pm]</li>
-                                                    <li>Dr. Bappa Ghosh and Dr. Reman Kumar Singh</li>
-                                                </ul>
+                                                Teaching Assistants: Dr. C. S.
+                                                Praveen and Dr. Rajendra A
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eight" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-        July 13 Day-2: Enhanced Sampling Methods; Force Field development; SILCS; Drug Design Tool
-      </button>
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#id-110"
+                                        aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseOne"
+                                    >
+                                        September 13 Day-1: Hands-on MD [Basics
+                                        of MD/Forcefield/..]
+                                    </button>
                                 </h2>
-                                <div id="eight" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingOne">
+                                <div
+                                    id="id-110"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingOne"
+                                >
                                     <div class="accordion-body">
                                         <ul>
+                                            <li>Time: [2:00 to 4:00]</li>
                                             <li>
-                                                Class
-                                                <ul>
-                                                    <li>
-                                                        Enhanced Sampling Methods
-                                                    </li>
-
-                                                    <li>Time: [9:00am - 10:30am]</li>
-                                                    <li>Prof. Arnab Mukherjee</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                Specialized Topic
-                                                <ul>
-                                                    <li>
-                                                        Force Field Development For Ionic Liquids
-                                                    </li>
-                                                    <li>Time: [11:00am - 12:30pm]</li>
-                                                    <li> Prof. Balasubramanian Sundaram </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                Tutorial
-                                                <ul>
-                                                    <li>
-                                                        Water and Calcium + Amides
-                                                    </li>
-
-                                                    <li>Protien Drug</li>
-                                                    <li>Time: [2:00pm - 5:00pm]</li>
-                                                    <li> Dr. Rakesh Pant and Dr. Reman Kumar Singh</li>
-                                                </ul>
-                                            </li>
-
-                                            <li>
-                                                Guest Lecture
-                                                <ul>
-                                                    <li>
-                                                        SILCS: A multifaceted tool for drug design using GCMC/MD approach
-                                                    </li>
-                                                    <li>Time: [6:30pm - 7:30pm]</li>
-                                                    <li>Prof. Alexander D. MacKerell Jr.</li>
-                                                </ul>
+                                                Teaching Assistants: Dr. Reman
+                                                Kumar S, Dr. Satish Dasari, Dr.
+                                                Subrahmanyam S
                                             </li>
                                         </ul>
-
                                     </div>
                                 </div>
                             </div>
-
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nine" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-         July 14 Day-3: Enhanced Sampling Methods contd; Thermostats And Algorithms; MTA: Tool for Fragment-based Optimization of Large Molecules
-      </button>
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#id-210"
+                                        aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseOne"
+                                    >
+                                        September 14 Day-2: Case study-3: Lipids
+                                    </button>
                                 </h2>
-                                <div id="nine" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingOne">
+                                <div
+                                    id="id-210"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingOne"
+                                >
                                     <div class="accordion-body">
                                         <ul>
+                                            <li>Time: [11:00 to 12:15]</li>
                                             <li>
-                                                Class
-                                                <ul>
-                                                    <li>
-                                                        Thermostats And Algorithm
-                                                    </li>
-                                                    <li>Time: [9:00am - 10:30am]</li>
-                                                    <li>Prof. Sajeev Chacko</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                Specialized Topic
-                                                <ul>
-                                                    <li>
-                                                        <!-- MD with Membrane Systems -->
-                                                        A Molecular Thermodynamic View of Biomolecular Recognition and Signalling
-                                                    </li>
-                                                    <li>Time: [11:00am - 12:30pm]</li>
-                                                    <li>Prof. Suman Chakrabarty</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                Tutorial
-                                                <ul>
-                                                    <li> Umbrella Sampling and Well-Tempered Metadynamics</li>
-                                                    <li>Time: [2:00pm - 5:00pm]</li>
-                                                    <li>Dr. Reman Kumar Singh</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                Guest Lecture
-                                                <ul>
-                                                    <li>Molecular Tailoring Approach: ab initio Treatment of Large Molecular Systems</li>
-                                                    <li>Time: [6:00pm - 7:00pm]</li>
-                                                    <li>Prof. Shridhar R. Gadre</li>
-                                                </ul>
+                                                Teaching Assistants: Prof.
+                                                Himanshu M, Denmark
                                             </li>
                                         </ul>
-
                                     </div>
                                 </div>
                             </div>
-
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ten" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-         July 15 Day-4: Introduction to QMMM; Application of QM/MM; Data Analysis 
-      </button>
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#id-310"
+                                        aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseOne"
+                                    >
+                                        September 15 Day-3: Case study-4: QSAR
+                                    </button>
                                 </h2>
-                                <div id="ten" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingOne">
+                                <div
+                                    id="id-310"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingOne"
+                                >
                                     <div class="accordion-body">
                                         <ul>
+                                            <li>Time: [9:00 to 10:15]</li>
                                             <li>
-                                                Class
-                                                <ul>
-                                                    <li>
-
-                                                        QM/MM Energy Calculations (input description)
-                                                    </li>
-                                                    <li>Time: [9:00am - 10:30am]</li>
-                                                    <li>Dr. Anmol Kumar</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                Specialized Topic
-                                                <ul>
-                                                    <li>
-                                                        QMMM Theory (Title to be updated)
-                                                    </li>
-                                                    <li>Time: [11:00am - 12:30pm]</li>
-                                                    <li>Prof. Prasenjit Ghosh</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                Tutorial
-                                                <ul>
-                                                    <li>
-                                                        QM/MM Setup (via CHARMM)
-                                                    </li>
-                                                    <li>Time: [2:00pm - 5:00pm]</li>
-                                                    <li>Dr. Anmol kumar </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                Guest Lecture
-                                                <ul>
-                                                    <li>Identifying valuable diversity in Cannabis, using genomic sequence data</li>
-                                                    <li>Time: [6:00pm - 7:00pm]</li>
-                                                    <li>Prof. Nolan Coburn Kane</li>
-                                                </ul>
+                                                Teaching Assistants: Prof. Dr.
+                                                Mukesh Doble (IIT Madras)
                                             </li>
                                         </ul>
-
                                     </div>
                                 </div>
                             </div>
-
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eleven" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-         July 16 Day-5:  QM/MM  Simulations 
-      </button>
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#id-410"
+                                        aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseOne"
+                                    >
+                                        September 15 Day-3: Hands-on MD
+                                    </button>
                                 </h2>
-                                <div id="eleven" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingOne">
+                                <div
+                                    id="id-410"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingOne"
+                                >
                                     <div class="accordion-body">
                                         <ul>
+                                            <li>Time: [2:00 to 4:00]</li>
                                             <li>
-                                                Class
-                                                <ul>
-                                                    <li>
-                                                        QM/MM Simulations
-                                                    </li>
-                                                    <li>Time: [9:00am - 10:30am]</li>
-                                                    <li>Dr. Anmol Kumar</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                Specialized Topic
-                                                <ul>
-                                                    <li>
-                                                        (To be decided)
-                                                    </li>
-                                                    <li>Time: [11:00am - 12:30pm]</li>
-                                                    <li>Prof. Partha Hazra</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                Tutorial
-                                                <ul>
-                                                    <li>
-
-                                                        QM/MM Simulation
-                                                    </li>
-                                                    <li>Time: [2:00pm - 5:00pm]</li>
-                                                    <li>Dr. Anmol kumar </li>
-                                                </ul>
-                                            </li>
-
-                                            <li>
-                                                Concluding Remarks
-                                                <ul>
-                                                </ul>
+                                                Teaching Assistants: [Enhanced
+                                                samplings]
                                             </li>
                                         </ul>
-
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#id-510"
+                                        aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseOne"
+                                    >
+                                        September 15 Day-3: Case study
+                                    </button>
+                                </h2>
+                                <div
+                                    id="id-510"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingOne"
+                                >
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Time: [6:00 to 7:15]</li>
+                                            <li>
+                                                Teaching Assistants: Prof. Nolan
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#id-610"
+                                        aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseOne"
+                                    >
+                                        September 16 Day-4: AIMD
+                                    </button>
+                                </h2>
+                                <div
+                                    id="id-610"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingOne"
+                                >
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Time: [2:00 to 3:15]</li>
+                                            <li>
+                                                Teaching Assistants: Dr.
+                                                Riccardo Bertossa (SISSA,
+                                                Italy), Dr. Davide TISI (SISSA,
+                                                Italy) or Dr. Paolo PEGOLO
+                                                (SISSA, Italy).
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#id-710"
+                                        aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseOne"
+                                    >
+                                        September 17 Day-5: Project report
+                                    </button>
+                                </h2>
+                                <div
+                                    id="id-710"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingOne"
+                                >
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>Time: [9:00 to 10:15]</li>
+                                            <li>
+                                                Teaching Assistants: Dr.
+                                                Subrahmanyam S
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <web-particles id="tsparticles3" options='{"fps_limit":60,"interactivity":{"detectsOn":"canvas","events":{"onClick":{"enable":true,"mode":"push"},"onHover":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"push":{"particles_nb":4},"repulse":{"distance":200,"duration":0.4}}},"particles":{"color":{"value":"#000000"},"links":{"color":"#2d2d30","distance":150,"enable":true,"opacity":0.4,"width":1},"move":{"bounce":false,"direction":"none","enable":true,"outMode":"out","random":false,"speed":2,"straight":false},"number":{"density":{"enable":true,"area":800},"value":80},"opacity":{"value":0.5},"shape":{"type":"circle"},"size":{"random":true,"value":5}},"detectRetina":true}'></web-particles>
-    <!-- Topics Covered End -->
-    <div class="default-margin speakers-and-tutors" id="guests">
-        <div class="tutors black-box default-box">
-            <center>
-                <h2>Guest Speakers</h2>
-            </center>
-            <ul>
-
-                <li>Prof. Alexander D. MacKerell Jr., Director, Computer-Aided Drug Design Center, University of Maryland, USA</li>
-                <li>Prof. Arnab Mukherjee, IISER Pune, India</li>
-                <li>Prof. Balasubramanian Sundaram, JNCASR Bangalore, India</li>
-                <li>Prof. Narayan Adikari, Tribhuvan University, Nepal</li>
-                <li>Prof. Nolan Kane, University of Colorado, Boulder, USA</li>
-                <li>Prof. Partha Hazra, IISER Pune, India</li>
-                <li>Prof. Prasenjit Ghosh, IISER Pune, India</li>
-                <li>Prof. Sajeev Chacko, University of Mumbai, India</li>
-                <li>Prof. Shridhar R. Gadre, Emeritus Professor, Savitribai Phule Pune University, India</li>
-                <li>Prof. Suman Chakrabarty, SNBNCBS, India </li>
-
-            </ul>
-        </div>
-    </div>
-
-    <div class="tutors orange-box default-box m-4" id="ta">
-        <center>
-            <h3>Teaching Assistants</h3>
-        </center>
-        <div class="d-flex justify-content-around flex-wrap">
-            <div>
-                <ul>
-                    <li>Dr. Subrahmanyam Sappati
-                        <ul>
-                            <li class="no-list-style">
-                                Raman Research Institute
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>Dr. Niharika Joshi
-                        <ul>
-                            <li class="no-list-style">
-                                National Chemistry Lab, Pune
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li> Dr. Reman Kumar Singh
-                        <ul>
-                            <li class="no-list-style">
-                                IIT Bombay
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li> Dr. Anmol Kumar
-                        <ul>
-                            <li class="no-list-style">
-                                University of Maryland, USA
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        Mr. Rajendra Koirala
-                        <ul>
-                            <li class="no-list-style">
-                                Central Department of Physics, Tribhuvan University
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        Dr. Bappa Ghosh
-                        <ul>
-                            <li class="no-list-style">
-                                IISER-TVM
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        Dr. C.S. Praveen
-                        <ul>
-                            <li class="no-list-style">
-                                CUSAT
-                            </li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li>
-                        Dr. Rajendra Adhikari
-                        <ul>
-                            <li class="no-list-style">
-                                Kathmandu University
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        Dr. Rakesh Pant
-                        <ul>
-                            <li class="no-list-style">
-                                IIT Bombay
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        Mr. Mohammed G
-                        <ul>
-                            <li class="no-list-style">
-                                University of Mumbai
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        Mr. Sai Raj Ali
-                        <ul>
-                            <li class="no-list-style">
-                                Jamia Millia Islamia University, New Delhi
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        Mr. Sarun Jonchhe
-                        <ul>
-                            <li class="no-list-style">
-                                Kathmandu University
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        Mrs. K. Kavya
-                        <ul>
-                            <li class="no-list-style">
-                                IVRI-Bangalore, India
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        Dr. Sathish Dasari
-                        <ul>
-                            <li class="no-list-style">
-                                IIT Hyderabad
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        Dr. Nandhakumar V.
-                        <ul>
-                            <li class="no-list-style">
-                                ICTP, Italy
-                            </li>
-                        </ul>
-                    </li>
-
-                </ul>
-                </li>
-
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <web-particles id="tsparticles2" options='{"fps_limit":60,"interactivity":{"detectsOn":"canvas","events":{"onClick":{"enable":true,"mode":"push"},"onHover":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"push":{"particles_nb":4},"repulse":{"distance":200,"duration":0.4}}},"particles":{"color":{"value":"#000000"},"links":{"color":"#2d2d30","distance":150,"enable":true,"opacity":0.4,"width":1},"move":{"bounce":false,"direction":"none","enable":true,"outMode":"out","random":false,"speed":2,"straight":false},"number":{"density":{"enable":true,"area":800},"value":80},"opacity":{"value":0.5},"shape":{"type":"circle"},"size":{"random":true,"value":5}},"detectRetina":true}'></web-particles>
-    <!-- organizers Start -->
-    <div class="d-flex justify-content-evenly flex-wrap">
-        <div class="default-box default-margin grey-box" id="register">
-            <center>
-                <h2>How To Register</h2>
-            </center>
-            <ol style="list-style-type:none">
-                <li>
-                    <h4>Registration Fee:</h4>
-                </li>
-                <li>For the faculty : <b>INR 5000 (NPR 4999) </b></li>
-                <li>For Postdocs : <b>INR 3500  (NPR 3999)</b></li>
-                <li>For Students : <b>INR 2000 (NPR 3000)</b></li>
-            </ol>
-            <center>
-                <!-- <a class="btn btn-success" >Closed</a> -->
-            </center>
-        </div>
-        <div class="d-flex flex-column">
-            <div class="default-box default-margin grey-box align-self-start" id="contact">
+        <web-particles
+            id="tsparticles3"
+            options='{"fps_limit":60,"interactivity":{"detectsOn":"canvas","events":{"onClick":{"enable":true,"mode":"push"},"onHover":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"push":{"particles_nb":4},"repulse":{"distance":200,"duration":0.4}}},"particles":{"color":{"value":"#000000"},"links":{"color":"#2d2d30","distance":150,"enable":true,"opacity":0.4,"width":1},"move":{"bounce":false,"direction":"none","enable":true,"outMode":"out","random":false,"speed":2,"straight":false},"number":{"density":{"enable":true,"area":800},"value":80},"opacity":{"value":0.5},"shape":{"type":"circle"},"size":{"random":true,"value":5}},"detectRetina":true}'
+        ></web-particles>
+        <!-- Topics Covered End -->
+        <div class="default-margin speakers-and-tutors" id="guests">
+            <div class="tutors black-box default-box">
                 <center>
-                    <h2>Contact Details</h2>
-
+                    <h2>Guest Speakers</h2>
                 </center>
+                <ul>
+                    <li>
+                        Prof. Alexander D. MacKerell Jr., Director,
+                        Computer-Aided Drug Design Center, University of
+                        Maryland, USA
+                    </li>
+                    <li>Prof. Arnab Mukherjee, IISER Pune, India</li>
+                    <li>
+                        Prof. Balasubramanian Sundaram, JNCASR Bangalore, India
+                    </li>
+                    <li>Prof. Narayan Adikari, Tribhuvan University, Nepal</li>
+                    <li>
+                        Prof. Nolan Kane, University of Colorado, Boulder, USA
+                    </li>
+                    <li>Prof. Partha Hazra, IISER Pune, India</li>
+                    <li>Prof. Prasenjit Ghosh, IISER Pune, India</li>
+                    <li>Prof. Sajeev Chacko, University of Mumbai, India</li>
+                    <li>
+                        Prof. Shridhar R. Gadre, Emeritus Professor, Savitribai
+                        Phule Pune University, India
+                    </li>
+                    <li>Prof. Suman Chakrabarty, SNBNCBS, India</li>
+                </ul>
+            </div>
+        </div>
 
-                <div class="d-flex flex-column justify-content-center" style="height:250px;min-width: 200px">
-                    <div class="align-content-center">
-                        <!-- <ol style="list-style-type:none;">
+        <div class="tutors orange-box default-box m-4" id="ta">
+            <center>
+                <h3>Teaching Assistants</h3>
+            </center>
+            <div class="d-flex justify-content-around flex-wrap">
+                <div>
+                    <ul>
+                        <li>
+                            Dr. Subrahmanyam Sappati
+                            <ul>
+                                <li class="no-list-style">
+                                    Raman Research Institute
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Dr. Niharika Joshi
+                            <ul>
+                                <li class="no-list-style">
+                                    National Chemistry Lab, Pune
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Dr. Reman Kumar Singh
+                            <ul>
+                                <li class="no-list-style">IIT Bombay</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Dr. Anmol Kumar
+                            <ul>
+                                <li class="no-list-style">
+                                    University of Maryland, USA
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Mr. Rajendra Koirala
+                            <ul>
+                                <li class="no-list-style">
+                                    Central Department of Physics, Tribhuvan
+                                    University
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Dr. Bappa Ghosh
+                            <ul>
+                                <li class="no-list-style">IISER-TVM</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Dr. C.S. Praveen
+                            <ul>
+                                <li class="no-list-style">CUSAT</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            Dr. Rajendra Adhikari
+                            <ul>
+                                <li class="no-list-style">
+                                    Kathmandu University
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Dr. Rakesh Pant
+                            <ul>
+                                <li class="no-list-style">IIT Bombay</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Mr. Mohammed G
+                            <ul>
+                                <li class="no-list-style">
+                                    University of Mumbai
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Mr. Sai Raj Ali
+                            <ul>
+                                <li class="no-list-style">
+                                    Jamia Millia Islamia University, New Delhi
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Mr. Sarun Jonchhe
+                            <ul>
+                                <li class="no-list-style">
+                                    Kathmandu University
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Mrs. K. Kavya
+                            <ul>
+                                <li class="no-list-style">
+                                    IVRI-Bangalore, India
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Dr. Sathish Dasari
+                            <ul>
+                                <li class="no-list-style">IIT Hyderabad</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Dr. Nandhakumar V.
+                            <ul>
+                                <li class="no-list-style">ICTP, Italy</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <web-particles
+            id="tsparticles2"
+            options='{"fps_limit":60,"interactivity":{"detectsOn":"canvas","events":{"onClick":{"enable":true,"mode":"push"},"onHover":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"push":{"particles_nb":4},"repulse":{"distance":200,"duration":0.4}}},"particles":{"color":{"value":"#000000"},"links":{"color":"#2d2d30","distance":150,"enable":true,"opacity":0.4,"width":1},"move":{"bounce":false,"direction":"none","enable":true,"outMode":"out","random":false,"speed":2,"straight":false},"number":{"density":{"enable":true,"area":800},"value":80},"opacity":{"value":0.5},"shape":{"type":"circle"},"size":{"random":true,"value":5}},"detectRetina":true}'
+        ></web-particles>
+        <!-- organizers Start -->
+        <div class="d-flex justify-content-evenly flex-wrap">
+            <div class="default-box default-margin grey-box" id="register">
+                <center>
+                    <h2>How To Register</h2>
+                </center>
+                <ol style="list-style-type: none">
+                    <li>
+                        <h4>Registration Fee:</h4>
+                    </li>
+                    <li>For the faculty : <b>INR 5000 (NPR 4999)</b></li>
+                    <li>For Postdocs : <b>INR 3500 (NPR 3999)</b></li>
+                    <li>For Students : <b>INR 2000 (NPR 3000)</b></li>
+                </ol>
+                <center>
+                    <!-- <a class="btn btn-success" >Closed</a> -->
+                </center>
+            </div>
+            <div class="d-flex flex-column">
+                <div
+                    class="default-box default-margin grey-box align-self-start"
+                    id="contact"
+                >
+                    <center>
+                        <h2>Contact Details</h2>
+                    </center>
+
+                    <div
+                        class="d-flex flex-column justify-content-center"
+                        style="height: 250px; min-width: 200px"
+                    >
+                        <div class="align-content-center">
+                            <!-- <ol style="list-style-type:none;">
            <li> Dr. Rajendra Adhikari (rajendra.adhikari@ku.edu.np)</li>
            <li> WhatsApp number: +9779801039635 </li>
            <li>Mr. Ashim Joshi(ashim.joshi@hotmail.com)</li>
         </ol> -->
 
-                        <ol style="list-style-type:none;">
-                            <li> Dr. Rajendra Adhikari
-                                <ul style="list-style-type: none;">
-                                    <li>
-                                        <a href="mailto:rajendra.adhikari@ku.edu.np">
-                rajendra.adhikari@ku.edu.np
-            </a>
-                                        <p>WhatsApp number: +9779801039635 </p>
+                            <ol style="list-style-type: none">
+                                <li>
+                                    Dr. Rajendra Adhikari
+                                    <ul style="list-style-type: none">
+                                        <li>
+                                            <a
+                                                href="mailto:rajendra.adhikari@ku.edu.np"
+                                            >
+                                                rajendra.adhikari@ku.edu.np
+                                            </a>
+                                            <p>
+                                                WhatsApp number: +9779801039635
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </li>
 
-                                    </li>
-                                </ul>
-                            </li>
+                                <li>
+                                    Dr. Subrahmanyam Sappati
+                                    <ul style="list-style-type: none">
+                                        <li>
+                                            <a
+                                                href="mailto:subrahmanyamsappati@gmail.com"
+                                            >
+                                                subrahmanyamsappati@gmail.com
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
 
-                            <li> Dr. Subrahmanyam Sappati
-                                <ul style="list-style-type: none;">
-                                    <li>
-                                        <a href="mailto:subrahmanyamsappati@gmail.com">
-               subrahmanyamsappati@gmail.com
-             </a>
-                                    </li>
-                                </ul>
-                            </li>
+                                <li>
+                                    Dr. Reman Kumar Singh
+                                    <ul style="list-style-type: none">
+                                        <li>
+                                            <a href="mailto:reman53@gmail.com">
+                                                reman53@gmail.com
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
 
-                            <li> Dr. Reman Kumar Singh
-                                <ul style="list-style-type: none;">
-                                    <li>
-                                        <a href="mailto:reman53@gmail.com">
-               reman53@gmail.com
-             </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>Mr. Ashim Joshi
-                                <ul style="list-style-type: none;">
-                                    <li>
-                                        <a href="mailto:ashim.joshi@hotmail.com">
-               ashim.joshi@hotmail.com
-             </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ol>
+                                <li>
+                                    Mr. Ashim Joshi
+                                    <ul style="list-style-type: none">
+                                        <li>
+                                            <a
+                                                href="mailto:ashim.joshi@hotmail.com"
+                                            >
+                                                ashim.joshi@hotmail.com
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
-
-            </div>
-            <div class="default-box default-margin blue-box" style="height:130px">
-                <div style="width:200px;margin: 0 auto;">
-                    <a class="btn btn-primary "  href="https://tinyurl.com/amdS2021" style="width:150px;margin:0 auto">Click Here to Register</a>
-                    <p class="text-muted" style="font-size:15px">Registration Will Be Closed on Aug 31</p>
+                <div
+                    class="default-box default-margin blue-box"
+                    style="height: 130px"
+                >
+                    <div style="width: 200px; margin: 0 auto">
+                        <a
+                            class="btn btn-primary"
+                            href="https://tinyurl.com/amdS2021"
+                            style="width: 150px; margin: 0 auto"
+                            >Click Here to Register</a
+                        >
+                        <p class="text-muted" style="font-size: 15px">
+                            Registration Will Be Closed on Aug 31
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <style>
-        .image{
-            width:100%;
-            border-radius: 10px;
-          }
-    </style>
-  
-    <!-- Organizers end -->
-    <div class="default-box grey-box default-margin" id="org">
-        <center>
-            <h2>Organizers</h2>
-        </center>
-        <div class="organizers">
+        <style>
+            .image {
+                width: 100%;
+                border-radius: 10px;
+            }
+        </style>
 
-            <div class="img-card">
-                <img class="img-logo" src="./img/1200px-Kathmandu_University_Logo.svg.png" alt="Green club of thoughts logo">
-                <h5>Department of Physics, Kathmandu University
-                </h5>
-            </div>
+        <!-- Organizers end -->
+        <div class="default-box grey-box default-margin" id="org">
+            <center>
+                <h2>Organizers</h2>
+            </center>
+            <div class="organizers">
+                <div class="img-card">
+                    <img
+                        class="img-logo"
+                        src="./img/1200px-Kathmandu_University_Logo.svg.png"
+                        alt="Green club of thoughts logo"
+                    />
+                    <h5>Department of Physics, Kathmandu University</h5>
+                </div>
 
-            <div class="img-card">
-                <img class="img-logo" src="./img/iiser.png" alt="Green club of thoughts logo">
-                <h5>Department of Chemistry, IISER Pune </h5>
-            </div>
+                <div class="img-card">
+                    <img
+                        class="img-logo"
+                        src="./img/iiser.png"
+                        alt="Green club of thoughts logo"
+                    />
+                    <h5>Department of Chemistry, IISER Pune</h5>
+                </div>
 
-            <div class="img-card">
-                <a href="http://gctatku.org.np" target="_blank" rel="noopener noreferrer">
-                    <img src="./img/gct_logo.png" class="img-logo" alt="Green club of thoughts logo">
-                </a>
-                <h5>Green Club of Thoughts Kathmandu University
-                </h5>
+                <div class="img-card">
+                    <a
+                        href="http://gctatku.org.np"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src="./img/gct_logo.png"
+                            class="img-logo"
+                            alt="Green club of thoughts logo"
+                        />
+                    </a>
+                    <h5>Green Club of Thoughts Kathmandu University</h5>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    </body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js " integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4 " crossorigin="anonymous "></script>
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.28.0/dist/tsparticles.min.js "></script>
-<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.5.0/custom-elements-es5-adapter.js "></script>
-<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.5.0/webcomponents-loader.js "></script>
-<script type="module " src="https://cdn.jsdelivr.net/npm/web-particles@1.1.0/dist/web-particles.min.js "></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js " integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin=" anonymous " referrerpolicy="no-referrer "></script>
-</body>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js "
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4 "
+        crossorigin="anonymous "
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.28.0/dist/tsparticles.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.5.0/custom-elements-es5-adapter.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.5.0/webcomponents-loader.js "></script>
+    <script
+        type="module "
+        src="https://cdn.jsdelivr.net/npm/web-particles@1.1.0/dist/web-particles.min.js "
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js "
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin=" anonymous "
+        referrerpolicy="no-referrer "
+    ></script>
 </html>
